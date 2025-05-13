@@ -57,6 +57,12 @@ def cadastrar_medico():
     db.session.commit()
     return jsonify(mensagem="Médico cadastrado com sucesso")
 
+@app.route('/medicos', methods=['GET'])
+@jwt_required()
+def listar_medicos():
+    medicos = Medico.query.all()
+    return jsonify([{'id': m.id, 'nome': m.nome, 'cpf': m.especialidade} for m in medicos])
+
 @app.route('/consultas', methods=['POST'])
 @jwt_required()
 def agendar_consulta():
@@ -65,6 +71,12 @@ def agendar_consulta():
     db.session.add(consulta)
     db.session.commit()
     return jsonify(mensagem="Consulta agendada com sucesso")
+
+@app.route('/consultas', methods=['GET'])
+@jwt_required()
+def listar_consultas():
+    consultas = Consulta.query.all()
+    return jsonify([{'id': c.id, 'paciente_id': c.paciente_id, 'medico_id': c.medico_id, 'data da consulta': c.data} for c in consultas])
 
 if __name__ == '__main__':
     app.run(debug=True)
