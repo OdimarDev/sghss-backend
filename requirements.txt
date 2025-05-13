@@ -2,5 +2,4 @@ flask
 flask_sqlalchemy
 flask_jwt_extended
 bcrypt
-pytest
 requests
