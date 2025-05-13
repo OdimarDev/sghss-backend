@@ -61,7 +61,7 @@ def cadastrar_medico():
 @jwt_required()
 def listar_medicos():
     medicos = Medico.query.all()
-    return jsonify([{'id': m.id, 'nome': m.nome, 'cpf': m.especialidade} for m in medicos])
+    return jsonify([{'id': m.id, 'nome': m.nome, 'especialidade': m.especialidade} for m in medicos])
 
 @app.route('/consultas', methods=['POST'])
 @jwt_required()
