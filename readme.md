@@ -21,8 +21,8 @@ Este projeto é o back-end de uma aplicação acadêmica que simula um sistema d
 1. **Clone o repositório:**
 
 ```bash
-git clone https://github.com/seu_usuario/seu_repositorio.git
-cd seu_repositorio
+git clone https://github.com/OdimarDev/sghss-backend.git
+cd sghss-backend
 ````
 
 2. **Crie e ative um ambiente virtual (opcional, mas recomendado):**
