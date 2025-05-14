@@ -178,6 +178,45 @@ Resposta:
 
 ---
 
+### ✅ GET /medicos
+
+Lista todos os médicos cadastrados. (🔒 Token necessário)
+
+```json
+Requisição:
+{
+  "paciente_id": 1,
+  "medico_id": 1,
+  "data": "2025-05-13"
+}
+
+Resposta:
+{
+  "mensagem": "Consulta agendada com sucesso"
+}
+```
+
+#### ✅ GET /medicos
+
+Lista todos os médicos cadastrados. (🔒 Token necessário)
+
+```json
+Resposta:
+[
+  {
+    "id": 1,
+    "nome": "Dr. João",
+    "especialidade": "Cardiologia"
+  }
+]
+```
+
+#### Observação:
+
+Esta API, por se tratar de um projeto acadêmico com escopo limitado, implementa apenas operações de criação (POST) e consulta (GET). As operações de edição (PUT) e exclusão (DELETE) podem ser adicionadas em versões futuras, conforme evolução da proposta.
+
+```
+
 ## ✅ Estrutura do Projeto
 
 ```
@@ -186,6 +225,7 @@ Resposta:
 ├── models.py
 ├── auth.py
 ├── requirements.txt
+├── readme.md
 ├── test_app.py (opcional para pytest)
 ├── database.db (gerado automaticamente)
 ```
