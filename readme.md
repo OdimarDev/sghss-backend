@@ -194,6 +194,7 @@ Resposta:
 {
   "mensagem": "Consulta agendada com sucesso"
 }
+
 ```
 
 #### ✅ GET /medicos
@@ -209,6 +210,7 @@ Resposta:
     "especialidade": "Cardiologia"
   }
 ]
+
 ```
 
 #### Observação:
@@ -220,6 +222,7 @@ Esta API, por se tratar de um projeto acadêmico com escopo limitado, implementa
 ## ✅ Estrutura do Projeto
 
 ```
+
 📦 sghss-backend
 ├── app.py
 ├── models.py
